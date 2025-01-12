@@ -11,107 +11,85 @@
 
 
 
-
 @import url('https://discordstyles.github.io/MinimalCord/dist/MinimalCord.css');
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
-
 :root {
-  --text-color: #fafafa;
-  --subtext-color: #737373;
-  --secondary-text-color: #0a0a0a;
-  --main-color: #0a0a0a;
-  --main-elevated-color: #171717;
-  --accent-color: #fafafa;
-  --sidebar-color: #0a0a0a;
-  --player-color: #0a0a0a;
-  --card-color: #0a0a0a;
-  --highlight-color: #171717;
-  --highlight-elevated-color: #171717;
-  --border-color: #262626;
-  --shadow-color: #262626;
-  --selected-row-color: #fafafa;
-  --button-color: #0a0a0a;
-  --button-hover-color: #171717;
-  --secondary-button-color: #fafafa;
-  --secondary-button-hover-color: #e5e5e5;
-  --button-active-color: #fafafa;
-  --button-disabled-color: #a1a1a6;
-  --tab-active-color: #171717;
-  --misc-color: #404040;
-
-  /* Original MinimalCord variables */
-  --accent: 250, 250, 250;
-  --message-padding: 10px;
-  --message-spacing: 10px;
-  
-  /* Dark Mode specific */
-  --dark-bg-hue: 0;
-  --dark-bg-saturation: 0%;
-  --dark-bg-lightness: 4%;
-  
-  /* Light Mode specific */
-  --light-bg-hue: 200;
-  --light-bg-saturation: 12%;
-  --light-bg-lightness: 100%;
-  
+  /*
+   * Accent variable
+   * Use this website: https://htmlcolorcodes.com/color-picker/
+   * to get your desired RGB numbers. Then simply put each number in their respective area.
+   * R,G,B
+   */
+   --accent: 122, 160, 122;  
+   /*
+   * Chat message variables
+   */
+  --message-padding: 10px; /* Spacing in the messages. MUST END IN px | DEFAULT: 10px */
+  --message-spacing: 10px; /* Spacing around the messages. MUST END IN px | DEFAULT: 10px */
+  /*
+   * Dark Mode variables
+   */
+  --dark-bg-hue: 0; /* Changed for #0a0a0a background */
+  --dark-bg-saturation: 0%; /* Changed for pure black/white scale */
+  --dark-bg-lightness: 4%; /* Adjusted for darkness level */
+  /*
+   * Light Mode variables
+   */
+  --light-bg-hue: 200; /* The HUE of the background. | DEFAULT: 200 */
+  --light-bg-saturation: 12%; /* The SATURATION of the background. | DEFAULT: 12% */
+  --light-bg-lightness: 100%; /* The LIGHTNESS of the background | DEFAULT: 100% */
+  /*
+   * To use a custom font. Visit https://fonts.google.com and select one to your liking.
+   * Now just follow this tutorial: https://imgur.com/a/CNbw7xC
+   */
   --font: "Inter";
 }
 
-/* Enhanced theme overrides for better text visibility */
+/* Dark Theme Customization */
 .theme-dark {
-  --background-primary: var(--main-color);
-  --background-secondary: var(--main-elevated-color);
-  --background-tertiary: var(--sidebar-color);
-  --text-normal: var(--text-color);
-  --text-muted: var(--subtext-color);
-  --header-primary: var(--text-color);
-  --header-secondary: var(--subtext-color);
-  --interactive-normal: var(--text-color);
-  --interactive-hover: var(--accent-color);
-  --interactive-active: var(--accent-color);
+  /* Text Colors */
+  --text-normal: #fafafa;
+  --text-muted: #737373;
+  --text-secondary: #0a0a0a;
   
-  /* Additional hover state fixes */
-  --interactive-muted: var(--subtext-color);
-  --background-modifier-hover: var(--highlight-color);
-  --background-modifier-active: var(--highlight-elevated-color);
-  --background-modifier-selected: var(--highlight-elevated-color);
-  --background-floating: var(--main-elevated-color);
-  --channeltextarea-background: var(--main-elevated-color);
+  /* Background Colors */
+  --background-primary: #0a0a0a;
+  --background-secondary: #171717;
+  --background-tertiary: #0a0a0a;
+  --background-floating: #171717;
+  
+  /* Interactive Elements */
+  --interactive-normal: #fafafa;
+  --interactive-hover: #fafafa;
+  --interactive-active: #fafafa;
+  --interactive-muted: #737373;
+  
+  /* Buttons and Selection */
+  --background-modifier-hover: #171717;
+  --background-modifier-active: #171717;
+  --background-modifier-selected: #171717;
+  
+  /* Additional Elements */
+  --channeltextarea-background: #171717;
+  --activity-card-background: #0a0a0a;
 }
 
-/* Additional hover state fixes */
-.theme-dark .item-2GWPIy:hover {
-  background-color: var(--highlight-color);
-  color: var(--text-color);
+/* Member List Fixes */
+.theme-dark .member-2gU6Ar.selected-1-Z6gm {
+  background-color: #171717 !important;
+  color: #fafafa !important;
 }
 
-.theme-dark .wrapper-NhbLHG:hover .content-1gYQeQ {
-  background-color: var(--highlight-color);
-  color: var(--text-color);
+.theme-dark .selected_d808b0 {
+  background-color: #171717 !important;
 }
 
-.theme-dark .clickable-ZD7xvu:hover {
-  background-color: var(--highlight-color);
-  color: var(--text-color);
+/* Button Fixes */
+.theme-dark .button-f2h6uQ {
+  background-color: #171717 !important;
+  color: #fafafa !important;
 }
 
-/* Message hover state */
-.theme-dark .message-2CShn3:hover {
-  background-color: var(--highlight-color);
-}
-
-/* Menu items hover state */
-.theme-dark .item-1OdjEX:hover {
-  background-color: var(--highlight-color);
-  color: var(--text-color);
-}
-
-/* Channel hover states */
-.theme-dark .channel-1Shao0:hover {
-  background-color: var(--highlight-color);
-}
-
-/* Server name hover */
-.theme-dark .nameHoveredText-2FFqiz {
-  color: var(--text-color);
+.theme-dark .button-f2h6uQ:hover {
+  background-color: #262626 !important;
 }
